@@ -1,0 +1,96 @@
+﻿@model FootballFixtures.Fixture
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Fixture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Competition.CompetitionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competition.CompetitionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Referee.RefereeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Referee.RefereeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gameweek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gameweek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatePlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatePlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimePlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimePlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTeamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeamID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HTGoals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HTGoals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ATGoals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ATGoals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayTeamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeamID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

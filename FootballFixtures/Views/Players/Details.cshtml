@@ -1,0 +1,66 @@
+﻿@model FootballFixtures.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Injury.InjuryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Injury.InjuryDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality.Nationality1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality.Nationality1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position.PositionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team.TeamName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team.TeamName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerSquadNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerSquadNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

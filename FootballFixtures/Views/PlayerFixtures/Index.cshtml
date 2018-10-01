@@ -1,0 +1,69 @@
+﻿@model IEnumerable<FootballFixtures.PlayerFixture>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fixture.FixtureID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Player.PlayerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoalsScored)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YellowCards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RedCards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assists)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fixture.FixtureID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Player.PlayerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeamID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GoalsScored)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YellowCards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RedCards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assists)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlayerFixturesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlayerFixturesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlayerFixturesID })
+        </td>
+    </tr>
+}
+
+</table>

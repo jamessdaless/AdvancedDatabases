@@ -1,0 +1,42 @@
+﻿@model FootballFixtures.Team
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Team</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Manager.ManagerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manager.ManagerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stadium.StadiumName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stadium.StadiumName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TeamID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,80 @@
+﻿@model FootballFixtures.PlayerFixture
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PlayerFixture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fixture.FixtureID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fixture.FixtureID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player.PlayerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player.PlayerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalsScored)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalsScored)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YellowCards)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YellowCards)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RedCards)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RedCards)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assists)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assists)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

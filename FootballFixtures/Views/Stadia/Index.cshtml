@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FootballFixtures.Stadium>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StadiumName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StadiumName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StadiumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StadiumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StadiumID })
+        </td>
+    </tr>
+}
+
+</table>

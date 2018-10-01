@@ -1,0 +1,26 @@
+﻿@model FootballFixtures.Competition
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Competition</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompetitionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompetitionName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CompetitionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<FootballFixtures.Fixture>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Competition.CompetitionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Referee.RefereeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gameweek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatePlayed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimePlayed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTeamID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HTGoals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATGoals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AwayTeamID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competition.CompetitionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Referee.RefereeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gameweek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatePlayed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimePlayed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTeamID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HTGoals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATGoals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AwayTeamID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FixtureID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FixtureID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FixtureID })
+        </td>
+    </tr>
+}
+
+</table>
